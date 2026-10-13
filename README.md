@@ -5,6 +5,8 @@ This project provides a pipeline for analyzing and classifying fishing activity 
 ## Dataset
 The project utilizes historical AIS data. The original source of the `trawlers.csv` dataset is the Global Fishing Watch [public training data](https://globalfishingwatch.org/data-download/datasets/public-training-data-v1), which requires login for access.
 
+Note on data format: where possible this project uses Parquet files for intermediate and input datasets. Parquet reduces memory footprint when loading data into Google Colab and significantly reduces download/upload sizes when transferring files to/from Google Drive. Using Parquet is recommended for reproducible Colab experiments and to minimize local memory pressure when working with large AIS datasets.
+
 ## Features
 - **Feature Engineering**: A complete pipeline for data cleaning, voxel segmentation, and feature extraction (temporal and spatial).
 - **Modeling**: 
